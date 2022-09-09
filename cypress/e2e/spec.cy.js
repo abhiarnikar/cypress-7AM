@@ -1,4 +1,4 @@
-// <reference types="cypress" />
+/// <reference types="cypress" />
 
 describe('login Page',()=>{
   it('google page',()=>{

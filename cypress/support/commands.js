@@ -23,3 +23,21 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('validateTable',(id,expected)=>{
+
+    let sum = 0
+        cy.get(`#t0${id}`).find('tr').each(function(el,index){
+            if(index != 0){
+                //cy.log(el)
+                //cy.log(el.children('td').last().text())
+                sum = sum + Number(el.children('td').last().text())
+            }
+        }).then(function(){
+            //cy.log(sum)
+            expect(sum).to.eq(expected)
+        })
+
+
+
+})
