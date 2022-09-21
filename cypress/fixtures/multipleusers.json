@@ -1,0 +1,21 @@
+[
+    {
+        "firstName":"abhijit",
+        "lastName":"arnikar",
+        "email":"abhiarnikar725@gmail.com",
+        "comments":"i am learning typescript"
+    },
+    {
+        "firstName":"devyani",
+        "lastName":"arnikar",
+        "email":"abhiarnikar725@gmail.com",
+        "comments":"i am learning javascript"
+    },
+    {
+        "firstName":"kaivaly",
+        "lastName":"arnikar",
+        "email":"abhiarnikar725@gmail.com",
+        "comments":"i am learning selenium"
+    }    
+    
+]
