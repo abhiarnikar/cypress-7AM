@@ -37,7 +37,7 @@ Cypress.Commands.add('validateTable',(id,expected)=>{
             //cy.log(sum)
             expect(sum).to.eq(expected)
         })
-
-
-
 })
+
+/// <reference types="cypress" />
+/// <reference types="cypress-xpath" />

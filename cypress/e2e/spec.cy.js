@@ -2,6 +2,6 @@
 
 describe('login Page',()=>{
   it('google page',()=>{
-      cy.visit('https://www.youtube.com/')
+      cy.visit('https://www.youtube.com')
   })
 })
