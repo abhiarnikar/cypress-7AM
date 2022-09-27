@@ -13,7 +13,7 @@ describe('handle dropdown',()=>{
         cy.get('#select2-billing_country-container').should('have.text','India')
        
     })
-    it(' Autosuggest dropdown without select',()=>{
+    it(' Autosuggest dropdown with select',()=>{
         cy.visit('https://www.wikipedia.org/')
         cy.get('#searchInput').type('Delhi')
         cy.get('.suggestion-title').contains('Delhi University').click()   
