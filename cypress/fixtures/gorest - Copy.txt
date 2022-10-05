@@ -1,0 +1,31 @@
+AZZv0pQCJoNGRr0GooCbXq-F4DFKj3xECPgBXZwrtLBTLAWk3lIG7d49TjL2NTucC9Dd_4zp20hC5Y-9
+
+EIduWKoLdEuucHDarLfXq-sjrczim1Q7RGKpHX2PiKK79aT29fmmMsTZVdmYtIDR1h8R4GbLAlHMLrqd
+
+
+0330e52add8d99569bb9f7c32af269b0ef53f066a585e86906812056c05718d8
+
+curl -i -H "Accept:application/json" -H "Content-Type:application/json" 
+-H "Authorization: Bearer 0330e52add8d99569bb9f7c32af269b0ef53f066a585e86906812056c05718d8"
+ -XGET "https://gorest.co.in/public/v2/users"
+
+curl -i -H "Accept:application/json" -H "Content-Type:application/json" 
+-H "Authorization: Bearer 0330e52add8d99569bb9f7c32af269b0ef53f066a585e86906812056c05718d8" 
+-XPOST "https://gorest.co.in/public/v2/users" 
+-d '{"name":"Tenali Ramakrishna", "gender":"male", "email":"tenali.ramakrishna@15ce.com", "status":"active"}'
+
+curl -i -H "Accept:application/json" -H "Content-Type:application/json" 
+-H "Authorization: Bearer 0330e52add8d99569bb9f7c32af269b0ef53f066a585e86906812056c05718d8" 
+-XPATCH "https://gorest.co.in/public/v2/users/11" 
+-d '{"name":"Allasani Peddana", "email":"allasani.peddana@15ce.com", "status":"active"}'
+
+curl -i -H "Accept:application/json" -H "Content-Type:application/json" 
+-H "Authorization: Bearer 0330e52add8d99569bb9f7c32af269b0ef53f066a585e86906812056c05718d8" 
+-XDELETE "https://gorest.co.in/public/v2/users/11"
+
+1) https://codenboxautomationlab.com/practice/
+
+2) https://demo.automationtesting.in/Datepicker.html
+
+3) https://www.youtube.com/watch?v=DKXkyzBV5Hw&list=PLQ7x7oTdExNIcM1lhKw1KdBeAq_VYD6fXl
+

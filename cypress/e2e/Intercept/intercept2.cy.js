@@ -75,7 +75,7 @@ describe('verify the intercept concept', () => {
         })
     })
 
-    it.only('verify the PUT comment',()=>{
+    it('verify the PUT comment',()=>{
         cy.intercept({
             method:"PUT",
             url:"https://jsonplaceholder.cypress.io/comments/1"
