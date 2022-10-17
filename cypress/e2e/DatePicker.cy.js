@@ -61,7 +61,7 @@ describe('verify the funcitonality of DatePicker in cypress', () => {
         SelectMonthandYear()
 
         function selectdate(){
-            cy.contains(daydate).click()
+            cy.get('td[class="day"]').contains(daydate).click()
         }
         selectdate()
     })
