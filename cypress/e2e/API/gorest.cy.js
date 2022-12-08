@@ -14,7 +14,7 @@ describe('verify the Gorest API', () => {
             cy.log(res)
             expect(res.status).to.eq(200)
             expect(res.body.length).to.eq(10)
-            expect(res.duration).to.be.lessThan(700)
+            expect(res.duration).to.be.lessThan(1000)
 
             res.body.forEach(element => {
                 expect(element).to.have.keys(["id", "name", "email", "status", "gender"])
@@ -54,15 +54,15 @@ describe('verify the Gorest API', () => {
     it('verify the PUT API',()=>{
         cy.request({
             method:"PUT",
-            url:"https://gorest.co.in/public/v2/users/16",
+            url:"https://gorest.co.in/public/v2/users/20",
             headers: {
                 'Authorization': `Bearer ${accessToken}`
             },
             body:
                 {
-                    name:"Allasani Peddana",
-                 email:`allasani.peddana${Math.floor(Math.random()*100000)}@15ce.com`,
-                  status:"active"
+                name:"Allasani Peddana",
+                email:`allasani.peddana${Math.floor(Math.random()*100000)}@15ce.com`,
+                status:"active"
                   }
 
         }).then((res)=>{
@@ -75,7 +75,7 @@ describe('verify the Gorest API', () => {
     it('verify the DELETE API',()=>{
         cy.request({
             method:"DELETE",
-            url:"https://gorest.co.in/public/v2/users/16",
+            url:"https://gorest.co.in/public/v2/users/20",
             headers: {
                 'Authorization': `Bearer ${accessToken}`
             }

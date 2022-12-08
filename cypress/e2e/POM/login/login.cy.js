@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { Login } from "../login.cy";
+import { Login } from "../login";
 
 describe('test suite',()=>{
 
@@ -10,6 +10,7 @@ describe('test suite',()=>{
         login.fillEmail('abhiarnikar725@gmail.com')
         login.fillPassword(7741985428)
         login.submit()
-        cy.title().should('be.equal','nopCommerce demo store')
+        login.Validate()
+       
     })
 })

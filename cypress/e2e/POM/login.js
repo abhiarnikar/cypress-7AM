@@ -21,4 +21,8 @@ export class Login {
         let button = cy.get('.button-1.login-button')
         button.click()
     }
+
+    Validate(){
+        cy.get('.header-logo').should('be.visible')
+    }
 }
