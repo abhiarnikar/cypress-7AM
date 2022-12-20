@@ -44,7 +44,7 @@ describe('verify the funcitonality of DatePicker in cypress', () => {
                     cy.get('.next').first().click()
                     SelectMonthandYear()
                 }
-            })
+            }).then(()=>{
                 
              
             cy.get(".datepicker-switch").first().then(function ($el) {
@@ -56,6 +56,7 @@ describe('verify the funcitonality of DatePicker in cypress', () => {
                     SelectMonthandYear()
                 }
             })
+        })
         }
 
         SelectMonthandYear()
