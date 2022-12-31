@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
-describe('verify the login functionality {sanity,regression}',{tags:['@regressionTag','@sanityTag']},()=>{
+describe('verify the login functionality ',()=>{
 
-    it('verify with valid credentials',()=>{
+    it('verify with valid credentials {regression}',()=>{
         cy.visit('https://www.zoomin.com/sign-in?%2F')
         cy.get('input[name="email"]').type('abhiarnikar725@gmail.com')
         cy.get('input[name="password"]').type('abhi@123')

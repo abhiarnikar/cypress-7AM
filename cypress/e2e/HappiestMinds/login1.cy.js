@@ -1,9 +1,9 @@
 /// <reference types="cypress" />
 
-describe('verify the login functionality {regression}',{tags:'@regressionTag'},()=>{
+describe('verify the login functionality ',()=>{
    
 
-    it('login with valid credentials',()=>{
+    it('login with valid credentials {regression}',()=>{
         cy.visit('https://www.saucedemo.com/')
         cy.get('input[name="user-name"]').type('standard_user')
         cy.get('input[name="password"]').type('secret_sauce')
@@ -11,7 +11,7 @@ describe('verify the login functionality {regression}',{tags:'@regressionTag'},(
         cy.get('.app_logo').should('be.visible')
     })
 
-    it('login with invalid credentials',()=>{
+    it('login with invalid credentials {smoke}',()=>{
         cy.visit('https://www.saucedemo.com/')
         cy.get('input[name="user-name"]').type('standard_use')
         cy.get('input[name="password"]').type('secret_sau')

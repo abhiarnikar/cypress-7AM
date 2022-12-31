@@ -2,7 +2,7 @@
 
 describe('fileUpload option in Cypress',()=>{
     
-    it('verify the file upload',()=>{
+    it('verify the file upload {smoke}',()=>{
         cy.visit('http://automationpractice.com/index.php?controller=contact')
         
         let myfile = 'gorest - Copy.txt'
@@ -10,7 +10,7 @@ describe('fileUpload option in Cypress',()=>{
         cy.get('.filename').should('contain.text','gorest - Copy.txt')
     })
 
-    it('verify the Drag and Drop file option',()=>{
+    it('verify the Drag and Drop file option {sanity}',()=>{
         cy.visit('https://css-tricks.com/examples/DragAndDropFileUploading/')
 
         let myfile1 = 'Capture.jpg.jpg'
@@ -18,7 +18,7 @@ describe('fileUpload option in Cypress',()=>{
         cy.get('[class="box__success"]').should('contain.text','Done')
     })
 
-    it('verify the multiple file upload',()=>{
+    it('verify the multiple file upload {regression}',()=>{
 
         cy.visit('https://davidwalsh.name/demo/multiple-file-upload.php')
         let myfile = 'gorest - Copy.txt'
@@ -30,7 +30,7 @@ describe('fileUpload option in Cypress',()=>{
 
     })
 
-    it.only('verify the fileName change while Uploading',()=>{
+    it('verify the fileName change while Uploading',()=>{
         
         cy.visit('https://davidwalsh.name/demo/multiple-file-upload.php')
         let myfile = 'gorest - Copy.txt' 

@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
-describe('verify the login functionality {sanity}',{tags:'@sanityTag'},()=>{
+describe('verify the login functionality',()=>{
     
-    it('login with valid credentials',()=>{
+    it('login with valid credentials {smoke}',()=>{
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
         cy.get('input[name="username"]').type('Admin')
         cy.get('input[name="password"]').type('admin123')
@@ -10,7 +10,7 @@ describe('verify the login functionality {sanity}',{tags:'@sanityTag'},()=>{
         cy.get('.oxd-userdropdown-name').should('be.visible')
     })
 
-    it('login with invalid credentails',()=>{
+    it('login with invalid credentails {sanity}',()=>{
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
         cy.get('input[name="username"]').type('Admin')
         cy.get('input[name="password"]').type('admin1234')
