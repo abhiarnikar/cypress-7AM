@@ -21,7 +21,7 @@ describe('verify the contactus form',()=>{
         comments:"i am learning typescript"
     }
 
-    it('verify the contact us form by object',function(){
+    it('TC_01',function(){
         cy.visit('http://www.webdriveruniversity.com/Contact-Us/contactus.html')
         cy.get('input[name="first_name"]').type(info.firstName)
         cy.get('input[name="last_name"]').type(info.lastName)

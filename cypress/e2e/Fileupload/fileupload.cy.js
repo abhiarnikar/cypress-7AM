@@ -10,7 +10,7 @@ describe('fileUpload option in Cypress',()=>{
         cy.get('.filename').should('contain.text','gorest - Copy.txt')
     })
 
-    it('verify the Drag and Drop file option {sanity}',()=>{
+    it('TC_03',()=>{
         cy.visit('https://css-tricks.com/examples/DragAndDropFileUploading/')
 
         let myfile1 = 'Capture.jpg.jpg'

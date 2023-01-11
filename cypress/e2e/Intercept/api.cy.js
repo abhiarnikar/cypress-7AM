@@ -13,7 +13,7 @@ describe('verify the kitchen API elements',()=>{
         })
 
     })
-    it('verify the POST comment',()=>{
+    it('TC_02',()=>{
         cy.request({
             method:"POST",
             url:"https://jsonplaceholder.cypress.io/comments",
