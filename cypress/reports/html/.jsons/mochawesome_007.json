@@ -1,0 +1,172 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-02-07T10:25:00.205Z",
+    "end": "2023-02-07T10:26:17.305Z",
+    "duration": 77100,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a5b11c8e-e31f-4733-9d8a-846fd3618aa7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Fileupload\\fileupload.cy.js",
+      "file": "cypress\\e2e\\Fileupload\\fileupload.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "66b6c428-bf18-4a76-8d25-73162701c333",
+          "title": "fileUpload option in Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify the file upload {smoke}",
+              "fullTitle": "fileUpload option in Cypress verify the file upload {smoke}",
+              "timedOut": null,
+              "duration": 7939,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\Fileupload\\\\fileupload.cy.js\\\\fileUpload option in Cypress -- verify the file upload {smoke} (failed) (2).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.visit('http://automationpractice.com/index.php?controller=contact');\nlet myfile = 'gorest - Copy.txt';\ncy.get('input[name=\"fileUpload\"]').attachFile(myfile);\ncy.get('.filename').should('contain.text', 'gorest - Copy.txt');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"fileUpload\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `input[name=\"fileUpload\"]`, but never found it.\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress\\e2e\\Fileupload\\fileupload.cy.js:104:8)",
+                "diff": null
+              },
+              "uuid": "65ed55cf-8f62-456d-b2d5-20257434e976",
+              "parentUUID": "66b6c428-bf18-4a76-8d25-73162701c333",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC_03",
+              "fullTitle": "fileUpload option in Cypress TC_03",
+              "timedOut": null,
+              "duration": 4178,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://css-tricks.com/examples/DragAndDropFileUploading/');\nlet myfile1 = 'Capture.jpg.jpg';\ncy.get('#file').attachFile(myfile1);\ncy.get('[class=\"box__success\"]').should('contain.text', 'Done');",
+              "err": {},
+              "uuid": "903da027-f46a-4569-a82f-de9fd124f630",
+              "parentUUID": "66b6c428-bf18-4a76-8d25-73162701c333",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify the multiple file upload {regression}",
+              "fullTitle": "fileUpload option in Cypress verify the multiple file upload {regression}",
+              "timedOut": null,
+              "duration": 13826,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://davidwalsh.name/demo/multiple-file-upload.php');\nlet myfile = 'gorest - Copy.txt';\nlet myfile1 = 'Capture.jpg.jpg';\nlet myfile2 = 'example.json';\ncy.get('#filesToUpload').attachFile([myfile, myfile1, myfile2]);\ncy.get('#fileList').children().should('have.length', 3);",
+              "err": {},
+              "uuid": "8aa89143-c56c-4743-9b0a-165a02b0d86d",
+              "parentUUID": "66b6c428-bf18-4a76-8d25-73162701c333",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify the fileName change while Uploading",
+              "fullTitle": "fileUpload option in Cypress verify the fileName change while Uploading",
+              "timedOut": null,
+              "duration": 10358,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://davidwalsh.name/demo/multiple-file-upload.php');\nlet myfile = 'gorest - Copy.txt';\ncy.get('#filesToUpload').attachFile({\n  filePath: myfile,\n  fileName: 'firstfile.txt'\n});\ncy.get('#fileList').children().should('have.length', 1);\ncy.get('#fileList').children().first().should('have.text', 'firstfile.txt');",
+              "err": {},
+              "uuid": "5436e28d-9ca1-487d-a995-ad8522529a5e",
+              "parentUUID": "66b6c428-bf18-4a76-8d25-73162701c333",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "903da027-f46a-4569-a82f-de9fd124f630",
+            "8aa89143-c56c-4743-9b0a-165a02b0d86d",
+            "5436e28d-9ca1-487d-a995-ad8522529a5e"
+          ],
+          "failures": [
+            "65ed55cf-8f62-456d-b2d5-20257434e976"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 36301,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

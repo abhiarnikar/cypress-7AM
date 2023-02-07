@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-07T10:29:57.189Z",
+    "end": "2023-02-07T10:30:39.031Z",
+    "duration": 41842,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "105bd54e-94b2-4500-a0cc-f4200816dca4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\HappiestMinds\\login.cy.js",
+      "file": "cypress\\e2e\\HappiestMinds\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "547a74ad-c195-4d55-9195-25bd939d2f5b",
+          "title": "verify the login functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login with valid credentials {smoke}",
+              "fullTitle": "verify the login functionality login with valid credentials {smoke}",
+              "timedOut": null,
+              "duration": 18031,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.get('.oxd-userdropdown-name').should('be.visible');",
+              "err": {},
+              "uuid": "43d76176-6ce6-4740-90e1-5af6f9b5588d",
+              "parentUUID": "547a74ad-c195-4d55-9195-25bd939d2f5b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login with invalid credentails {sanity}",
+              "fullTitle": "verify the login functionality login with invalid credentails {sanity}",
+              "timedOut": null,
+              "duration": 11476,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin1234');\ncy.get('button[type=\"submit\"]').click();\ncy.get('.oxd-alert-content.oxd-alert-content--error').should('be.visible');\ncy.get('.oxd-alert-content.oxd-alert-content--error').should('have.text', 'Invalid credentials');",
+              "err": {},
+              "uuid": "2c16e887-8b9c-46a0-8b34-22c80aae75db",
+              "parentUUID": "547a74ad-c195-4d55-9195-25bd939d2f5b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "43d76176-6ce6-4740-90e1-5af6f9b5588d",
+            "2c16e887-8b9c-46a0-8b34-22c80aae75db"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29507,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

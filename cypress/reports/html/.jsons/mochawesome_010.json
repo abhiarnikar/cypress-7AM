@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-07T10:31:34.224Z",
+    "end": "2023-02-07T10:32:18.615Z",
+    "duration": 44391,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "935d0573-f410-4dd3-85d5-4bed4264c7db",
+      "title": "",
+      "fullFile": "cypress\\e2e\\HappiestMinds\\login1.cy.js",
+      "file": "cypress\\e2e\\HappiestMinds\\login1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1851a054-67f3-4cc9-a282-f80e36b11d0b",
+          "title": "verify the login functionality ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login with valid credentials {regression}",
+              "fullTitle": "verify the login functionality  login with valid credentials {regression}",
+              "timedOut": null,
+              "duration": 14510,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.saucedemo.com/');\ncy.get('input[name=\"user-name\"]').type('standard_user');\ncy.get('input[name=\"password\"]').type('secret_sauce');\ncy.get('input[type=\"submit\"]').click();\ncy.get('.app_logo').should('be.visible');",
+              "err": {},
+              "uuid": "760be566-37fe-4f3c-a8f1-517bbe2b06e4",
+              "parentUUID": "1851a054-67f3-4cc9-a282-f80e36b11d0b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login with invalid credentials {smoke}",
+              "fullTitle": "verify the login functionality  login with invalid credentials {smoke}",
+              "timedOut": null,
+              "duration": 16764,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.saucedemo.com/');\ncy.get('input[name=\"user-name\"]').type('standard_use');\ncy.get('input[name=\"password\"]').type('secret_sau');\ncy.get('input[type=\"submit\"]').click();\ncy.get('.error-button').should('be.visible');",
+              "err": {},
+              "uuid": "51fab7c5-017f-4d3d-872e-b2ffeb66088d",
+              "parentUUID": "1851a054-67f3-4cc9-a282-f80e36b11d0b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "760be566-37fe-4f3c-a8f1-517bbe2b06e4",
+            "51fab7c5-017f-4d3d-872e-b2ffeb66088d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31274,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

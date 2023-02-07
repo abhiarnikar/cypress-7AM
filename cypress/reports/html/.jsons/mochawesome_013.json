@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-02-07T10:41:19.333Z",
+    "end": "2023-02-07T10:41:56.474Z",
+    "duration": 37141,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "61238157-03b5-44fd-8f49-0e8f4e119a81",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Intercept\\intercept.cy.js",
+      "file": "cypress\\e2e\\Intercept\\intercept.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "601fce06-ef73-42a1-a446-c80bfab93f77",
+          "title": "verify the UI for kitchen example",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify the UI for GET comment",
+              "fullTitle": "verify the UI for kitchen example verify the UI for GET comment",
+              "timedOut": null,
+              "duration": 19902,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept({\n  method: \"GET\",\n  url: \"https://jsonplaceholder.cypress.io/comments/1\"\n}).as('getComment');\ncy.visit('https://example.cypress.io/commands/network-requests');\ncy.contains('Get Comment').click();\ncy.wait('@getComment');\ncy.get('.network-comment').should('contain', 'laudantium enim quasi est quidem magnam');",
+              "err": {},
+              "uuid": "32bb3847-67a8-4b4f-946d-8c45e580ffdb",
+              "parentUUID": "601fce06-ef73-42a1-a446-c80bfab93f77",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify the UI for POST comment",
+              "fullTitle": "verify the UI for kitchen example verify the UI for POST comment",
+              "timedOut": null,
+              "duration": 3303,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept({\n  method: \"POST\",\n  url: \"https://jsonplaceholder.cypress.io/comments\"\n}).as('postComment');\ncy.visit('https://example.cypress.io/commands/network-requests');\ncy.contains('Post Comment').click();\ncy.wait('@postComment');\ncy.get('.network-post-comment').should('have.text', 'POST successful!');",
+              "err": {},
+              "uuid": "b52f7e1a-7f2d-4ad0-a92d-c730a867b663",
+              "parentUUID": "601fce06-ef73-42a1-a446-c80bfab93f77",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "32bb3847-67a8-4b4f-946d-8c45e580ffdb",
+            "b52f7e1a-7f2d-4ad0-a92d-c730a867b663"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23205,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

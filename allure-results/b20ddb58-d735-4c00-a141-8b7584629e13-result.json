@@ -1,0 +1,1 @@
+{"uuid":"b20ddb58-d735-4c00-a141-8b7584629e13","historyId":"231421cb8dbdae6934a2431b3b0c8662","status":"passed","statusDetails":null,"stage":"finished","steps":[],"attachments":[],"parameters":[],"labels":[{"name":"suite","value":"fileUpload option in Cypress"}],"links":[],"start":1675765551191,"name":"TC_03","fullName":"TC_03","stop":1675765551193}
