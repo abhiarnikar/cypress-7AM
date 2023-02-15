@@ -2,7 +2,7 @@
 
 describe('validate the API',()=>{
 
-    it('validate the GET API',function(){
+    it('validate the GET API',function(){ // abhi
         cy.request({
             method:"GET",
             url:"https://reqres.in/api/users?page=2"
